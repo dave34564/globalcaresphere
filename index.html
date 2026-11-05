@@ -1,11 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobalCareSphere</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlobalCareSphere</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f8ff;
+  color: #15345b;
+}
+
+header {
+  background: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #0878db;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0878db, #064b9b);
+  color: white;
+  padding: 45px 22px;
+  text-align: center;
+  border-radius: 0 0 28px 28px;
+}
+
+.hero h1 {
+  font-size: 30px;
+}
+
+.hero p {
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  background: white;
+  color: #0878db;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.services {
+  padding: 25px 18px;
+}
+
+.services h2 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.service {
+  background: white;
+  padding: 22px 12px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 3px 12px #dce8f5;
+}
+
+.service span {
+  font-size: 32px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #58718e;
+}
+</style>
 </head>
+
 <body>
+
+<header>
+  <div class="logo">GlobalCareSphere</div>
+  <div>☰</div>
+</header>
+
+<section class="hero">
+  <h1>Your Health, Our Priority</h1>
+  <p>Quality healthcare made accessible.
+  Wherever you are, we're here to help.</p>
+  <a href="#services" class="btn">Explore Services</a>
+</section>
+
+<section class="services" id="services">
+  <h2>Our Healthcare Services</h2>
+
+  <div class="grid">
+
+    <div class="service">
+      <span>📅</span>
+      <h3>Appointments</h3>
+      <p>Book a healthcare appointment.</p>
+    </div>
+
+    <div class="service">
+      <span>📹</span>
+      <h3>Video Consultation</h3>
+      <p>Connect with healthcare professionals.</p>
+    </div>
+
+    <div class="service">
+      <span>🏥</span>
+      <h3>Home Visits</h3>
+      <p>Request care at your home.</p>
+    </div>
+
+    <div class="service">
+      <span>🚑</span>
+      <h3>Emergency Help</h3>
+      <p>Find urgent local medical assistance.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 GlobalCareSphere. All rights reserved.
+</footer>
 
 </body>
 </html>
