@@ -1,1 +1,286 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlobalCareSphere | Healthcare Platform</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f7fc;color:#19334d}
+header{background:#073b70;color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:21px;font-weight:bold}
+nav{display:flex;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:9px;font-size:13px}
+.hero{background:linear-gradient(120deg,#073b70,#078bc7);color:white;text-align:center;padding:65px 6%}
+.hero h1{font-size:36px}
+.hero p{line-height:1.8;max-width:650px;margin:15px auto 25px}
+.btn{display:inline-block;padding:12px 19px;border:0;border-radius:7px;text-decoration:none;font-weight:bold;cursor:pointer;margin:5px}
+.white{background:white;color:#073b70}
+.green{background:#159b62;color:white}
+.blue{background:#087fbd;color:white}
+.dark{background:#073b70;color:white}
+section{padding:35px 6%}
+h2{color:#073b70}
+.center{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px;margin-top:22px}
+.card,.panel{background:white;padding:22px;border-radius:12px;box-shadow:0 3px 14px #dce7f0}
+.card h3{color:#087fbd}
+.card p{line-height:1.6}
+.panel{max-width:650px;margin:20px auto}
+input,select,textarea{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #ccd8e5;border-radius:7px;font-size:15px}
+label{font-weight:bold}
+.dashboard{background:#eaf3fb;padding:25px;border-radius:12px;margin-top:20px}
+.stat{background:white;padding:18px;border-radius:10px;text-align:center}
+.stat strong{font-size:25px;color:#087fbd}
+.hidden{display:none}
+.notice{background:#fff3cd;color:#664d03;padding:14px;border-radius:8px;line-height:1.6}
+footer{background:#073b70;color:white;text-align:center;padding:25px}
+.small{font-size:12px;line-height:1.6;color:#657b8f}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">GlobalCareSphere</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#account">Account</a>
+<a href="#dashboards">Dashboards</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<h1>Healthcare Within Your Reach</h1>
+<p>A digital healthcare platform designed to connect patients, healthcare professionals and healthcare services.</p>
+<a class="btn white" href="#services">Explore Services</a>
+<a class="btn green" href="https://wa.me/2347031059394">WhatsApp Us</a>
+</div>
+
+<section id="services">
+<h2 class="center">Our Healthcare Services</h2>
+<div class="grid">
+<div class="card">
+<h3>Appointment Booking</h3>
+<p>Request a healthcare appointment.</p>
+<a href="#booking">Book appointment</a>
+</div>
+<div class="card">
+<h3>Home Healthcare</h3>
+<p>Enquire about healthcare services at home.</p>
+<a href="#booking">Request home service</a>
+</div>
+<div class="card">
+<h3>Video Consultation</h3>
+<p>Enquire about online healthcare consultations.</p>
+<a href="#contact">Contact us</a>
+</div>
+<div class="card">
+<h3>Medical Services</h3>
+<p>Get information about available healthcare services.</p>
+<a href="#contact">Make an enquiry</a>
+</div>
+<div class="card">
+<h3>Healthcare Professionals</h3>
+<p>Enquire about healthcare professionals.</p>
+<a href="#contact">Contact our team</a>
+</div>
+<div class="card">
+<h3>Emergency Information</h3>
+<p>For emergencies in the UK, call 999. This website does not dispatch emergency services.</p>
+<a href="tel:999">Call 999</a>
+</div>
+</div>
+</section>
+
+<section id="account">
+<h2 class="center">Patient Account</h2>
+<div class="panel">
+<h3>Create Patient Account</h3>
+<form id="registerForm">
+<label>Full name</label>
+<input id="patientName" required placeholder="Enter your name">
+<label>Email address</label>
+<input id="patientEmail" type="email" required placeholder="Enter email">
+<label>Password</label>
+<input id="patientPassword" type="password" minlength="6" required placeholder="At least 6 characters">
+<button class="btn blue" type="submit">Register</button>
+</form>
+<hr>
+<h3>Patient Login</h3>
+<form id="loginForm">
+<input id="loginEmail" type="email" required placeholder="Email address">
+<input id="loginPassword" type="password" required placeholder="Password">
+<button class="btn dark" type="submit">Login</button>
+</form>
+<button class="btn green" onclick="logout()">Logout</button>
+<p id="accountMessage">Demo interface: secure account login is not connected yet.</p>
+</div>
+</section>
+
+<section id="booking">
+<h2 class="center">Appointment & Home-Service Booking</h2>
+<div class="panel">
+<form id="bookingForm">
+<label>Your name</label>
+<input id="bookingName" required placeholder="Full name">
+<label>Phone number</label>
+<input id="bookingPhone" required type="tel" placeholder="Your contact number">
+<label>Email</label>
+<input id="bookingEmail" type="email" placeholder="Email address">
+<label>Service required</label>
+<select id="bookingType" required>
+<option value="">Choose service</option>
+<option>Appointment booking</option>
+<option>Home healthcare</option>
+<option>Video consultation enquiry</option>
+<option>Medical service enquiry</option>
+</select>
+<label>Preferred date</label>
+<input id="bookingDate" type="date">
+<label>General message</label>
+<textarea id="bookingNote" placeholder="Do not enter private medical information"></textarea>
+<button class="btn blue" type="submit">Send Booking Request</button>
+</form>
+<p class="small">This opens WhatsApp with your request. It does not confirm an appointment or dispatch a healthcare professional.</p>
+</div>
+</section>
+
+<section id="dashboards">
+<h2 class="center">GlobalCareSphere Dashboards</h2>
+<p class="center">Choose a dashboard to preview its features.</p>
+
+<div class="grid">
+<div class="card">
+<h3>Patient Dashboard</h3>
+<p>Patient profile, appointment requests, booking status and notifications.</p>
+<button class="btn blue" onclick="showDashboard('patientDash')">Open Patient Dashboard</button>
+</div>
+<div class="card">
+<h3>Doctor Dashboard</h3>
+<p>Professional profile, appointment schedule and availability.</p>
+<button class="btn blue" onclick="showDashboard('doctorDash')">Open Doctor Dashboard</button>
+</div>
+<div class="card">
+<h3>Admin Dashboard</h3>
+<p>Platform overview, patient management, doctor management and service requests.</p>
+<button class="btn dark" onclick="showDashboard('adminDash')">Open Admin Dashboard</button>
+</div>
+</div>
+
+<div id="patientDash" class="dashboard hidden">
+<h3>Patient Dashboard</h3>
+<div class="grid">
+<div class="stat"><strong>0</strong><p>Appointments</p></div>
+<div class="stat"><strong>0</strong><p>Home Requests</p></div>
+<div class="stat"><strong>0</strong><p>Notifications</p></div>
+</div>
+<p>Patient profile and appointment management will be connected to the secure database.</p>
+<button class="btn blue" onclick="location.href='#booking'">Request Appointment</button>
+</div>
+
+<div id="doctorDash" class="dashboard hidden">
+<h3>Doctor Dashboard</h3>
+<div class="grid">
+<div class="stat"><strong>0</strong><p>Appointments</p></div>
+<div class="stat"><strong>0</strong><p>Patients</p></div>
+<div class="stat"><strong>0</strong><p>Pending Requests</p></div>
+</div>
+<p>Doctor verification, patient assignments, availability and scheduling require secure backend access.</p>
+</div>
+
+<div id="adminDash" class="dashboard hidden">
+<h3>Admin Dashboard</h3>
+<div class="grid">
+<div class="stat"><strong>0</strong><p>Patients</p></div>
+<div class="stat"><strong>0</strong><p>Doctors</p></div>
+<div class="stat"><strong>0</strong><p>Bookings</p></div>
+<div class="stat"><strong>0</strong><p>Payments</p></div>
+</div>
+<p>Administrator permissions and real platform management will be connected through a secure backend.</p>
+</div>
+
+<div class="notice">
+These are dashboard previews, not secure working accounts. Do not use them to manage real patients or clinical information.
+</div>
+</section>
+
+<section id="payments">
+<h2 class="center">Payments</h2>
+<div class="panel center">
+<h3>Secure Online Payments</h3>
+<p>Payment integration is planned.</p>
+<p>Online payment, bank transfer and other supported options will be added after the payment provider and secure backend are configured.</p>
+</div>
+</section>
+
+<section id="notifications">
+<h2 class="center">Notifications</h2>
+<div class="panel center">
+<p>Appointment updates and service notifications will be connected in a later development stage.</p>
+</div>
+</section>
+
+<section id="contact">
+<div class="panel center">
+<h2>Contact GlobalCareSphere</h2>
+<p>For appointment enquiries, home-service requests and other information:</p>
+<h3>07031059394</h3>
+<a class="btn green" href="https://wa.me/2347031059394">WhatsApp Us</a>
+<a class="btn blue" href="tel:+2347031059394">Call Us</a>
+</div>
+</section>
+
+<footer>
+<h3>GlobalCareSphere</h3>
+<p>Connecting people with healthcare.</p>
+<p class="small" style="color:white">Platform under development. Healthcare services are not yet operational. Do not submit sensitive medical information.</p>
+<p>© 2026 GlobalCareSphere</p>
+</footer>
+
+<script>
+function showDashboard(id){
+ document.querySelectorAll(".dashboard").forEach(function(d){
+  d.classList.add("hidden");
+ });
+ document.getElementById(id).classList.remove("hidden");
+ document.getElementById(id).scrollIntoView({behavior:"smooth"});
+}
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=document.getElementById("bookingName").value;
+ const phone=document.getElementById("bookingPhone").value;
+ const email=document.getElementById("bookingEmail").value;
+ const type=document.getElementById("bookingType").value;
+ const date=document.getElementById("bookingDate").value || "Not specified";
+ const note=document.getElementById("bookingNote").value;
+
+ const message="Hello GlobalCareSphere. I have a service request.\n"+
+ "Name: "+name+"\nPhone: "+phone+"\nEmail: "+email+
+ "\nService: "+type+"\nPreferred date: "+date+"\nMessage: "+note;
+
+ window.open("https://wa.me/2347031059394?text="+encodeURIComponent(message),"_blank");
+});
+
+document.getElementById("registerForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("accountMessage").textContent=
+ "Registration preview only. Secure registration has not yet been connected.";
+});
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("accountMessage").textContent=
+ "Login preview only. Secure authentication has not yet been connected.";
+});
+
+function logout(){
+ document.getElementById("accountMessage").textContent="You are viewing the demo interface.";
+}
+</script>
+
+</body>
+</html>
